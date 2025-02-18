@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* In your custom styles.css or Tailwind CSS file */
+@layer utilities {
+    .custom-before::before {
+      content: "";
+      width: 35px;
+      height: 35px;
+      background-color: #feb424;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg); /* Rotate and position the element */
+    }
+  }
+
+.homebannerslider .slick-arrow,.vegitableSlider .slick-arrow ,.testimonial-slider .slick-arrow{
+    z-index: 9;
+}
+.homebannerslider .slick-prev:before, .homebannerslider .slick-next:before{
+    color: #81c408;
+    font-size: 50px;
+}   
+.homebannerslider .slick-prev {
+    left: 0;
+}
+
+.vegitableSlider .slick-slide ,.testimonial-slider .slick-slide  {
+    margin: 0 15px;
+    padding: 60px 0;
+}
+
+.vegitableSlider .slick-prev:before,.vegitableSlider .slick-next:before ,.testimonial-slider .slick-next:before ,.testimonial-slider .slick-prev:before{
+    font-size: 40px;
+    color: #81c408;
+
+}
+.vegitableSlider .slick-arrow ,.testimonial-slider .slick-arrow {
+    top: 0;
+}
+.vegitableSlider .slick-arrow ,.homebannerslider .slick-arrow ,.testimonial-slider .slick-arrow{
+    width:auto;
+}
+.vegitableSlider .slick-next ,.homebannerslider .slick-next ,.testimonial-slider .slick-next  {
+    right: 10px;
+}
+.vegitableSlider .slick-prev  ,.testimonial-slider .slick-prev {
+    left: auto;
+    right: 70px;
+}
+
+  .twitter:hover .social-icon path {
+    fill: black; 
+  }
+  
