@@ -29,8 +29,8 @@
 }
 
 .vegitableSlider .slick-slide ,.testimonial-slider .slick-slide  {
+    margin: 0 15px;
     padding: 60px 0;
-    margin: 0 10px;
 }
 
 .vegitableSlider .slick-prev:before,.vegitableSlider .slick-next:before ,.testimonial-slider .slick-next:before ,.testimonial-slider .slick-prev:before{
@@ -52,7 +52,7 @@
     right: 70px;
 }
 
-.twitter:hover .social-icon path {
+  .twitter:hover .social-icon path {
     fill: black; 
-}
+  }
   
