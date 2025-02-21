@@ -3,20 +3,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import categoriesApi from "../../api/categoriesApi";
-import productApi from "../../api/productApi";
+import categoryproductApi from "../../api/categoryproductApi";
 const FruitShop = () => {
   const [categories, setCategoreis] = useState([]);
   const [products, setProducts] = useState([]);
-  const [currentCategory , setCurrentCateory] = useState('jewelery');
+  const [currentCategory, setCurrentCateory] = useState("electronics");
 
-  const handleTabClick = (category) =>{
+  const handleTabClick = (category) => {
     setCurrentCateory(category);
     fetchProducts(category);
-  }
+  };
 
-  const fetchProducts = async (category) => {
+  const fetchProducts = async (category = "electronics") => {
     try {
-      const data = await productApi(category,4);
+      const data = await categoryproductApi(category, 4);
       setProducts(data);
     } catch (error) {
       console.log("Error occurred while fetching products:", error);
@@ -29,12 +29,12 @@ const FruitShop = () => {
         const categoriesList = await categoriesApi();
         setCategoreis(categoriesList);
       } catch (error) {
-        console.log('Error occurred while fetching categories:',error);
+        console.log("Error occurred while fetching categories:", error);
       }
     };
+
     categories();
     fetchProducts();
-
   }, []);
   return (
     <>
@@ -50,7 +50,11 @@ const FruitShop = () => {
                   <span
                     key={index}
                     onClick={() => handleTabClick(category)}
-                    className={`rounded-full px-6 py-2 text-center cursor-pointer transition-all duration-300 ${currentCategory === category ? "bg-default-gold text-white" :'bg-theme-gray'} `}
+                    className={`rounded-full px-6 py-2 text-center cursor-pointer transition-all duration-300 ${
+                      currentCategory === category
+                        ? "bg-default-gold text-white"
+                        : "bg-theme-gray"
+                    } `}
                   >
                     {category}
                   </span>
@@ -60,7 +64,7 @@ const FruitShop = () => {
             <div className="products-section col-span-12">
               <div className="products-list my-16">
                 <div className="grid grid-cols-4 gap-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-                  {products.map((product,index) => (
+                  {products.map((product, index) => (
                     <div
                       key={product.id}
                       className="product-box bg-white rounded-lg relative hover:shadow-custom-shadow transition-shadow duration-300 border border-default-gold"
