@@ -74,18 +74,20 @@ const VegitableShop = () => {
                   className="product-box bg-white rounded-lg relative hover:shadow-custom-shadow transition-shadow duration-300 border border-default-green"
                 >
                   <div className="product-image overflow-hidden rounded-tl-lg rounded-tr-xl">
-                    <img
-                      src={product.image}
-                      alt={product.title}
-                      className="hover:scale-120 max-w-full transition-all duration-300 w-full h-[254px] object-contain bg-[#f4f6f8]"
-                    />
+                    <Link to={`product/${product.id}`}>
+                      <img
+                        src={product.image}
+                        alt={product.title}
+                        className="hover:scale-120 max-w-full transition-all duration-300 w-full h-[254px] object-contain bg-[#f4f6f8]"
+                      />
+                    </Link>
                     <div className="category text-white bg-default-green px-4 py-1 absolute top-5 right-5 rounded-xl">
                       {product.category}
                     </div>
                   </div>
                   <div className="products-description text-center p-5 rounded-bl-xl rounded-br-xl">
                     <h4 className="text-2xl font-semibold line-clamp-1">
-                      {product.title}
+                      <Link to={`product/${product.id}`}>{product.title}</Link>
                     </h4>
                     <p className="text-gray-600 py-5 line-clamp-1 mb-6">
                       {product.description}

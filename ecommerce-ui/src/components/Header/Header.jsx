@@ -49,7 +49,6 @@ const Header = () => {
               <ul className='flex space-x-7 capitalize sm:space-x-0 sm:block'>
                 <li className='sm:p-2'><Link to="/">Home</Link></li>
                 <li className='sm:p-2'><Link to="/shop">Shop</Link></li>
-                <li className='sm:p-2'><Link to="/shop-details">shop details</Link></li>
                 <li className="group relative sm:p-2">
                   <Link to="#">Pages</Link>
                   <ul className="absolute left-0 hidden group-hover:block bg-gray-200 shadow-md max-h-0 group-hover:max-h-40 transition-all duration-300 overflow-hidden p-5 rounded-md ">
@@ -66,7 +65,6 @@ const Header = () => {
               <ul className='flex space-x-7 capitalize sm:space-x-0 sm:block'>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/shop">Shop</Link></li>
-                <li><Link to="/shop-details">shop details</Link></li>
                 <li className="group relative">
                   <Link to="#">Pages</Link>
                   <ul className="absolute left-0 hidden group-hover:block bg-gray-200 shadow-md max-h-0 group-hover:max-h-40 transition-all duration-300 overflow-hidden rounded-md">

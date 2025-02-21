@@ -54,15 +54,19 @@ const Bestseller = () => {
                 className="products-list bg-theme-gray rounded-lg grid grid-cols-2 gap-5 items-center justify-between p-6 xl:p-3 xl:gap-3"
               >
                 <div className="producst-img">
-                  <img
-                    src={selleritem.image}
-                    alt="best-product"
-                    className="w-full rounded-full h-[172px] object-contain lg:h-[150px] md:h-[160px]"
-                  />
+                  <Link to={`product/${selleritem.id}`}>
+                    <img
+                      src={selleritem.image}
+                      alt="best-product"
+                      className="w-full rounded-full h-[172px] object-contain lg:h-[150px] md:h-[160px]"
+                    />
+                  </Link>
                 </div>
                 <div className="products-description">
                   <h2 className="text-xl font-semibold mb-3">
-                    {selleritem.title}
+                    <Link to={`product/${selleritem.id}`}>
+                      {selleritem.title}
+                    </Link>
                   </h2>
                   <div className="rating mb-3">
                     {renderStars(selleritem.rating.rate)}(
@@ -87,15 +91,19 @@ const Bestseller = () => {
             {productList.map((selleritem, index) => (
               <div key={index} className="productlist text-center">
                 <div className="product-img">
-                  <img
-                    src={selleritem.image}
-                    alt={selleritem.title}
-                    className="w-full rounded-xl h-[215px] object-contain"
-                  />
+                  <Link to={`product/${selleritem.id}`}>
+                    <img
+                      src={selleritem.image}
+                      alt={selleritem.title}
+                      className="w-full rounded-xl h-[215px] object-contain"
+                    />
+                  </Link>
                 </div>
                 <div className="products-description mt-4">
                   <h2 className="text-xl font-semibold mb-3">
-                    {selleritem.title}
+                    <Link to={`product/${selleritem.id}`}>
+                      {selleritem.title}
+                    </Link>
                   </h2>
                   <div className="rating mb-3">
                     {renderStars(selleritem.rating.rate)}(
