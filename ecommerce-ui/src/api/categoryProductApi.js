@@ -1,6 +1,6 @@
 import apiClient from "./apiClient";
 
-const productApi = async (category ='jewelery', number = 4) => {
+const categoryproductApi = async (category ='jewelery', number = 4) => {
     try {
         const response = await apiClient.get(`/products/category/${category}?limit=${number}`);
         console.log(response.data);
@@ -12,4 +12,4 @@ const productApi = async (category ='jewelery', number = 4) => {
     }
 };
 
-export default productApi
+export default categoryproductApi

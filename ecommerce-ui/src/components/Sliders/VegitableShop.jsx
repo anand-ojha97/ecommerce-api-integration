@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick"; // Import react-slick
 import { Link } from "react-router-dom";
-import productApi from "../../api/productApi";
+import categoryproductApi from "../../api/categoryproductApi";
 
 const VegitableShop = () => {
   const [products, setProducts] = useState([]);
@@ -9,7 +9,7 @@ const VegitableShop = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const data = await productApi('electronics');
+        const data = await categoryproductApi('electronics');
         setProducts(data);
       } catch (error) {
         console.log("Error occurred while fetching products:", error);
