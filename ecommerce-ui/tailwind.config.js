@@ -15,6 +15,9 @@ export default {
       fontFamily: {
         raleway: ['Raleway', 'sans-serif'], 
       },
+      clipPath:{
+        'polygon': 'polygon(98% 17%, 100% 34%, 98% 51%, 100% 68%, 98% 84%, 100% 100%, 0 100%, 0 0, 100% 0)',
+      },
       fontSize: {
         '2.5xl': '2.5rem', // Add a custom font size class 'text-2.5xl'
       },

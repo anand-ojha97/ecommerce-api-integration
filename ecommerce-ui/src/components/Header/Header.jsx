@@ -86,7 +86,9 @@ const Header = () => {
               <FontAwesomeIcon icon={faBagShopping} size='2x' color="#81c408" />
               <span className='count absolute px-2 left-4 bottom-4 bg-default-gold rounded-full'>3</span>
             </div>
-            <FontAwesomeIcon icon={faUser} size='2x' color="#81c408" />
+            <Link>
+                <FontAwesomeIcon icon={faUser} size='2x' color="#81c408" />
+            </Link>
           </div>
         </div>
       </div>

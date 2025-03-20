@@ -66,7 +66,7 @@ const CategorySidebar = () => {
                     <div className="feature-products-list">
                         <div className="flex">
                             <div className="w-[100px] h-[100px] mr-4">
-                                <img src="src/images/featur-1.jpg" alt="feature" />
+                                <img src="/src/images/featur-1.jpg" alt="feature" />
                             </div>
                             <div className="product-content">
                                 <h4 className='font-semibold'>Big Banana</h4>
@@ -81,7 +81,7 @@ const CategorySidebar = () => {
                         </div>
                         <div className="flex">
                             <div className="w-[100px] h-[100px] mr-4">
-                                <img src="src/images/featur-2.jpg" alt="feature" />
+                                <img src="/src/images/featur-2.jpg" alt="feature" />
                             </div>
                             <div className="product-content">
                                 <h4 className='font-semibold'>Big Banana</h4>
@@ -96,7 +96,7 @@ const CategorySidebar = () => {
                         </div>
                         <div className="flex">
                             <div className="w-[100px] h-[100px] mr-4">
-                                <img src="src/images/featur-3.jpg" alt="feature" />
+                                <img src="/src/images/featur-3.jpg" alt="feature" />
                             </div>
                             <div className="product-content">
                                 <h4 className='font-semibold'>Big Banana</h4>
@@ -119,7 +119,7 @@ const CategorySidebar = () => {
                 </div>
                 <div className="banner-section-sidebar">
                     <div className="banner-img relative">
-                        <img src="src/images/banner-fruits.jpg" alt="banner-fruits" className='rounded-xl w-full'/>
+                        <img src="/src/images/banner-fruits.jpg" alt="banner-fruits" className='rounded-xl w-full'/>
                         <div className="absolute top-40 right-2 lg:top-28 md:top-64 sm:top-40">
                             <h3 className='text-default-gold font-bold text-3xl md:text-5xl'>Fresh <br/>Fruits <br/>Banner</h3>
                         </div>
